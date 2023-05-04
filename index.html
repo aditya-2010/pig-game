@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pig Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <main>
+        <section class="player player-1 player-active">
+            <h2 class="name" id="name-1"></h2>
+            <h1 class="score" id="score-1">0</h1>
+            <div class="current">
+                <div class="current-label">CURRENT</div>
+                <div class="current-score" id="current-1">0</div>
+            </div>
+        </section>
+        <section class="player player-2">
+            <h2 class="name" id="name-2"></h2>
+            <h1 class="score" id="score-2">0</h1>
+            <div class="current current-right">
+                <div class="current-label">CURRENT</div>
+                <div class="current-score" id="current-2">0</div>
+            </div>
+        </section>
+    </main>
+
+    <button class="btn btn-new">🆕 NEW GAME</button>
+    <img src="dice-2.png" alt="Playing dice" class="dice">
+    <button class="btn btn-roll">🎲 ROLL DICE </button>
+    <button class="btn btn-hold">✔️ HOLD</button>
+
+    <div class="overlay"></div>
+
+    <div class="welcome-modal">
+        <p>Who's playing?</p>
+        <div>
+            <input class="inputs" type="text" placeholder="Player 1" id="input-name-1"
+                onkeypress="return event.charCode != 32">
+            <input class="inputs" type="text" placeholder="Player 2" id="input-name-2"
+                onkeypress="return event.charCode != 32">
+        </div>
+        <button class="btn btn-play">Play!</button>
+    </div>
+    <div class="winning-modal hidden">
+        <p class="win-msg"></p>
+        <button class="btn btn-play-again">PLAY AGAIN!</button>
+    </div>
+</body>
+
+</html>
